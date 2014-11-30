@@ -1,4 +1,4 @@
-# Docker collected 
+# Docker collectd 
 
 [![Circle CI](https://circleci.com/gh/dstendardi/docker-collectd.svg?style=shield)](https://circleci.com/gh/dstendardi/docker-collectd)
 
