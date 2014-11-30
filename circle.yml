@@ -4,11 +4,11 @@ machine:
 
 dependencies:
   pre:
-    - docker login -e $DOCKER_HUB_EMAIL -p $DOCKER_HUB_PASSWORD -u $DOCKER_HUB_USER 
+    - docker login -e $QUAY_EMAIL -p $QUAY_PASSWORD -u $QUAY_USER quay.io 
 
 test:
   pre:
-    - docker build -t $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+    - docker build -t quay.io/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
   override:
     - echo "nothing yet"
 
@@ -17,5 +17,5 @@ deployment:
     branch: master
     owner: dstendardi
     commands:
-      - docker push $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+      - docker push quay.io/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
 
