@@ -1,0 +1,21 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker login -e $DOCKER_HUB_EMAIL -p $DOCKER_HUB_PASSWORD -u $DOCKER_HUB_USER 
+
+test:
+  pre:
+    - docker build -t $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+  override:
+    - echo "nothing yet"
+
+deployment:
+  hub:
+    branch: master
+    owner: dstendardi
+    commands:
+      - docker push $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+
