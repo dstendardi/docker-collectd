@@ -9,7 +9,7 @@ RUN apt-get install wget \
  && pip install pystache
 
 ADD config.tpl /config.tpl
-ADD test.py /test.py
+ADD run.py /run.py
 ADD collectd-docker.sh /usr/share/collectd/collectd-docker.sh
 
-CMD ["python", "/test.py"]
+CMD ["python", "/run.py"]
