@@ -11,7 +11,7 @@ LoadPlugin "write_graphite"
 LoadPlugin "table"
 {{#Memory}}
 <Plugin "table">
-  <Table "/cgroup/memory/docker/{{Id}}/memory.stat">
+  <Table "/mount/cgroup/memory/docker/{{Id}}/memory.stat">
     Instance "{{Instance}}"
     Separator " \\n"
     <Result>
