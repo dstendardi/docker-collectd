@@ -1,5 +1,5 @@
 FROM google/debian:wheezy
-MAINTAINER Paul Lewis <paullewis91@gmail.com>
+MAINTAINER David Stendardi
 
 RUN apt-get update && apt-get -y install collectd
 RUN apt-get install wget \
