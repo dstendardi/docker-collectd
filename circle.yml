@@ -8,7 +8,7 @@ dependencies:
 
 test:
   pre:
-    - docker build -t quay.io/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+    - docker build -t quay.io/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
   override:
     - echo "nothing yet"
 
