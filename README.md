@@ -1,5 +1,7 @@
 # Docker collected 
 
+[![Circle CI](https://circleci.com/gh/dstendardi/docker-collectd.svg?style=shield)](https://circleci.com/gh/dstendardi/docker-collectd)
+
 A collectd docker image that configure itself using the docker api and gather metrics about cgroups and linked containers.
 
 ## Usage
@@ -15,7 +17,7 @@ Also, the collectd will attempt to connect to a carbon compatible host using the
  * `CARBON_PORT_2003_TCP_PORT` 
 
 ```sh
-docker run -v /mount/run:/run -v /sys/fs/cgroup:/mount/cgroup --link graphite:carbon -ti collectd
+docker run -v /mount/run:/var/run -v /sys/fs/cgroup:/mount/cgroup --link graphite:carbon -ti qay.io/dstendardi/collectd
 ```
 
 ## Roadmap
