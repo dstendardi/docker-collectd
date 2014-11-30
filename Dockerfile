@@ -10,6 +10,5 @@ RUN apt-get install wget \
 
 ADD config.tpl /config.tpl
 ADD run.py /run.py
-ADD collectd-docker.sh /usr/share/collectd/collectd-docker.sh
 
 CMD ["python", "/run.py"]
